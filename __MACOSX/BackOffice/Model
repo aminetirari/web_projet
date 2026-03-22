@@ -1,0 +1,63 @@
+<?php
+class Book {
+    private $id;
+    private $title;
+    private $author;
+    private $publication_date;
+    private $language;
+    private $status;
+    private $copies;
+    private $category;
+
+    public function __construct($id = null, $title = null, $author = null, $publication_date = null,
+                                $language = null, $status = null, $copies = null, $category = null) {
+        $this->id = $id;
+        $this->title = $title;
+        $this->author = $author;
+        $this->publication_date = $publication_date;
+        $this->language = $language;
+        $this->status = $status;
+        $this->copies = $copies;
+        $this->category = $category;
+    }
+
+    // Getters and setters
+    public function getId() { return $this->id; }
+    public function setId($id) { $this->id = $id; }
+
+    public function getTitle() { return $this->title; }
+    public function setTitle($title) { $this->title = $title; }
+
+    public function getAuthor() { return $this->author; }
+    public function setAuthor($author) { $this->author = $author; }
+
+    public function getPublicationDate() { return $this->publication_date; }
+    public function setPublicationDate($date) { $this->publication_date = $date; }
+
+    public function getLanguage() { return $this->language; }
+    public function setLanguage($lang) { $this->language = $lang; }
+
+    public function getStatus() { return $this->status; }
+    public function setStatus($status) { $this->status = $status; }
+
+    public function getCopies() { return $this->copies; }
+    public function setCopies($copies) { $this->copies = $copies; }
+
+    public function getCategory() { return $this->category; }
+    public function setCategory($cat) { $this->category = $cat; }
+
+    // show() method: returns HTML row
+    public function show() {
+        return "<tr>
+                    <td>{$this->id}</td>
+                    <td>{$this->title}</td>
+                    <td>{$this->author}</td>
+                    <td>{$this->publication_date}</td>
+                    <td>{$this->language}</td>
+                    <td>{$this->status}</td>
+                    <td>{$this->copies}</td>
+                    <td>{$this->category}</td>
+                </tr>";
+    }
+}
+?>
