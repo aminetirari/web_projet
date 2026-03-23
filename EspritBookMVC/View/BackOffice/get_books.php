@@ -11,11 +11,9 @@ foreach ($books as $book) {
         'id' => $book->getId(),
         'title' => $book->getTitle(),
         'author' => $book->getAuthor(),
-        'publication_date' => $book->getPublicationDate(),
-        'language' => $book->getLanguage(),
-        'status' => $book->getStatus(),
+        'category' => $book->getCategory(),
         'copies' => $book->getCopies(),
-        'category' => $book->getCategory()
+        'status' => $book->getStatus()
     ];
 }
 echo json_encode($data);
